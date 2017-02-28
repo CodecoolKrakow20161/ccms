@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template
 
 # Define the blueprint: 'people', set its url prefix: app.url/people
-mod_people = Blueprint('people', __name__, url_prefix='/people')
+mod_default = Blueprint('default', __name__)
 
 # Set the route and accepted methods
-@mod_people.route('/', methods=['GET'])
+@mod_default.route('/', methods=['GET'])
 def index():
-    return render_template('people/index.html')
+    return render_template('default/index.html')

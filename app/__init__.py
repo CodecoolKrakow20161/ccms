@@ -10,6 +10,6 @@ app.config.from_object('config')
 def not_found(error):
     return render_template('404.html'), 404
 
-from app.mod_people.controllers import mod_people
+from app.mod_default.controllers import mod_default
 
-app.register_blueprint(mod_people)
+app.register_blueprint(mod_default)
