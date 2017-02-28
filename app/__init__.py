@@ -16,8 +16,10 @@ def not_found(error):
     return render_template('404.html'), 404
 
 from app.mod_default.controllers import mod_default
+from app.mod_classes.controllers import mod_classes
 
 app.register_blueprint(mod_default)
+app.register_blueprint(mod_classes)
 
 # Build the database:
 # This will create the database file using SQLAlchemy
