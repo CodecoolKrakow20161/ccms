@@ -90,3 +90,5 @@ ENV/
 
 # PyCharm directory
 .idea
+
+.DS_Store
