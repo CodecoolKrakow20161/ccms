@@ -25,3 +25,14 @@ def new():
 
 
     return render_template('classes/new.html', form=form)
+
+@mod_classes.route('/edit/<int:class_id>', methods=['GET', 'POST'])
+def edit(class_id):
+    klass = Klass.query.get(class_id)
+    form = KlassForm(formdata=request.form, obj=klass)
+    if form.validate_on_submit():
+        klass.name = form.name.data
+        db.session.commit()
+        return redirect('/classes')
+
+    return render_template('classes/edit.html', form=form)
