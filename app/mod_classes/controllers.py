@@ -16,8 +16,7 @@ def index():
 def new():
     form = KlassForm(request.form)
     if form.validate_on_submit():
-        klass = Klass()
-        form.populate_obj(klass)
+        klass = Klass(name=form.name.data)
 
         db.session.add(klass)
         db.session.commit()
