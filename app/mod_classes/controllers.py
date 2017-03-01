@@ -10,3 +10,7 @@ mod_classes = Blueprint('classes', __name__, url_prefix='/classes')
 def index():
     klasses = Klass.query.all()
     return render_template('classes/index.html', klasses=klasses)
+
+@mod_classes.route('/new', methods=['GET'])
+def new():
+    return render_template('classes/new.html')
