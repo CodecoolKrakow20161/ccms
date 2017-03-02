@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, url_for
 from app import db
 from app.mod_classes.models import Klass
 from app.mod_classes.forms import KlassForm
@@ -36,3 +36,10 @@ def edit(class_id):
         return redirect('/classes')
 
     return render_template('classes/edit.html', form=form)
+
+@mod_classes.route('/delete/<int:class_id>', methods=['GET'])
+def delete(class_id):
+    klass = Klass.query.get(class_id)
+    db.session.delete(klass)
+    db.session.commit()
+    return redirect(url_for('classes.index'))

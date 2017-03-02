@@ -19,7 +19,9 @@
                         <td>{{ loop.index }}</td>
                         <td>{{ klass.name }}</td>
                         <td>
-                            <a href="{{ url_for('classes.edit', class_id=klass.id) }}">Edit</a>
+                            <span><a href="{{ url_for('classes.edit', class_id=klass.id) }}">Edit</a></span>
+                            <span>|</span>
+                            <span><a href="{{ url_for('classes.delete', class_id=klass.id) }}">Remove</a></span>
                         </td>
                     </tr>
                 {% endfor %}
