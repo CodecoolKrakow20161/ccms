@@ -3,3 +3,7 @@ table.table.table-indexed tr td:first-child {
     text-align: center;
     width: 70px;
 }
+
+p.bg {
+    padding: 15px;
+}
