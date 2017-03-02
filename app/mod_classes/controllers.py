@@ -21,8 +21,7 @@ def new():
         db.session.add(klass)
         db.session.commit()
 
-        return redirect('/classes')
-
+        return redirect(url_for('classes.index'))
 
     return render_template('classes/new.html', form=form)
 
@@ -33,13 +32,16 @@ def edit(class_id):
     if form.validate_on_submit():
         klass.name = form.name.data
         db.session.commit()
-        return redirect('/classes')
+
+        return redirect(url_for('classes.index'))
 
     return render_template('classes/edit.html', form=form)
 
 @mod_classes.route('/delete/<int:class_id>', methods=['GET'])
 def delete(class_id):
     klass = Klass.query.get(class_id)
+
     db.session.delete(klass)
     db.session.commit()
+
     return redirect(url_for('classes.index'))
