@@ -1,12 +1,8 @@
+{% from "_formhelpers.html" import render_field %}
+
 <form class="form-horizontal" action="" method="post">
     {{ form.csrf_token }}
-    <div class="form-group">
-        <label class="col-sm-2 col-lg-2 control-label">Class name</label>
-        <div class="col-sm-8 col-lg-8">
-            {{ form.name(class="form-control") }}
-            <p class="help-block">Put class name in format LOCATION.YEAR.CLASS_NUM, e.g. KRK.2016.1</p>
-        </div>
-    </div>
+    {{ render_field(form.name, class="form-control") }}
 
     <div class="form-group">
         <div class="col-sm-8 col-lg-8 col-sm-offset-2 col-lg-offset-2">
