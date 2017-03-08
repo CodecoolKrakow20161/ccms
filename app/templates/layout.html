@@ -1,3 +1,9 @@
+{% macro render_menu_item(endpoint, display, cls='', icon_cls='', active='') %}
+    <li {% if request.endpoint == endpoint or active == endpoint %} class='active' {% endif %}>
+        <a href="{{ url_for(endpoint) }}"><i class="fa fa-fw {{ icon_cls }}"></i> {{ display }}</a>
+    </li>
+{% endmacro %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +45,8 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="{{ url_for('default.index') }}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="{{ url_for('classes.index') }}"><i class="fa fa-fw fa-dashboard"></i> Classes</a>
-                    </li>
+                    {{ render_menu_item('default.index', 'Dashboard', icon_cls='fa-dashboard', active=active_page) }}
+                    {{ render_menu_item('classes.index', 'Classes', icon_cls='fa-dashboard', active=active_page) }}
                 </ul>
             </div>
         </nav>
