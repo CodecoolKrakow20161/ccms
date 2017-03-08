@@ -6,3 +6,10 @@ class KlassForm(ModelForm):
     class Meta:
         model = Klass
         strip_string_fields = True
+        field_args = {
+            "name": {
+                "filters": [
+                    lambda s: s.upper() if s else s
+                ]
+            }
+        }
