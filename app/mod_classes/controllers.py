@@ -15,7 +15,7 @@ def index():
 @mod_classes.route('/new', methods=['GET', 'POST'])
 def new():
     form = KlassForm(request.form)
-    if form.validate_on_submit():
+    if request.method == "POST" and form.validate():
         klass = Klass(name=form.name.data)
 
         db.session.add(klass)
@@ -29,7 +29,7 @@ def new():
 def edit(class_id):
     klass = Klass.query.get(class_id)
     form = KlassForm(formdata=request.form, obj=klass)
-    if form.validate_on_submit():
+    if request.method == "POST" and form.validate():
         klass.name = form.name.data
         db.session.commit()
 

@@ -1,8 +1,8 @@
-from app.base_form import BaseForm
-from wtforms import StringField
-from wtforms.validators import DataRequired
+from wtforms_alchemy import ModelForm
+from app.mod_classes.models import Klass
 
-class KlassForm(BaseForm):
-    name = StringField('Class name', [
-        DataRequired(message='Plase give a class name')
-    ])
+
+class KlassForm(ModelForm):
+    class Meta:
+        model = Klass
+        strip_string_fields = True
