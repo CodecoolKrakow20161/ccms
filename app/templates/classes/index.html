@@ -1,11 +1,10 @@
 {% extends "layout.html" %}
+{% set page_title %}Classes{% endset %}
+{% block page_header %}
+    {{ super() }}
+    <a href="{{ url_for('classes.new') }}" class="btn btn-primary pull-right">Add new class</a>
+{% endblock %}
 {% block body %}
-
-<!-- Page Heading -->
-<header class="page-header">
-    <h1>Classes</h1>
-    <a class="btn btn-primary pull-right">Add new class</a>
-</header>
 
 <div class="row">
     <div class="col-lg-12">

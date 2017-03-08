@@ -35,7 +35,7 @@ def edit(class_id):
 
         return redirect(url_for('classes.index'))
 
-    return render_template('classes/edit.html', form=form)
+    return render_template('classes/edit.html', form=form, klass=klass)
 
 @mod_classes.route('/delete/<int:class_id>', methods=['GET'])
 def delete(class_id):
