@@ -11,7 +11,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 # Define the database - we are working with
 # SQLite for this example
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
+SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI", "sqlite:///" + os.path.join(BASE_DIR, 'app.db'))
 DATABASE_CONNECT_OPTIONS = {}
 
 # Enable protection agains *Cross-site Request Forgery (CSRF)*
