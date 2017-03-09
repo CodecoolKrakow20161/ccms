@@ -41,15 +41,17 @@ directory and do the following steps:
    This will activate local development environment in current terminal
    session only. You have to run this command for every new terminal session.
 
+   You should notice `(env)` text at the beginning of your command line prompt.
+
 3. Install requirements
    ```
-   $ pip install -r requirements.txt
+   (env) $ pip install -r requirements.txt
    ```
 
 4. Run server
 
    ```
-   $ python run.py
+   (env) $ python run.py
    ```
 
 4. Open web-browser and navigate to [http://localhost:8080](http://localhost:8080)
