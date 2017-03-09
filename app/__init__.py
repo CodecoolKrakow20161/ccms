@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 
 app = Flask(__name__)
 
@@ -10,8 +9,6 @@ app.config.from_object('config')
 # Define the database object which is imported
 # by modules and controllers
 db = SQLAlchemy(app)
-
-migrate = Migrate(app, db)
 
 # Sample HTTP error handling
 @app.errorhandler(404)
