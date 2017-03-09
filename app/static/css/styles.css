@@ -16,6 +16,12 @@ header.page-header {
         margin-top: 20px;
     }
 
+.navbar-right > li > span {
+    color: #999;
+    display: block;
+    padding: 15px 15px;
+}
+
 table.table.table-indexed tr th:first-child,
 table.table.table-indexed tr td:first-child {
     text-align: center;
