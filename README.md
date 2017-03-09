@@ -21,18 +21,18 @@ https://virtualenv.pypa.io/en/stable/ and read concept about it.
 #### Getting started
 
 After you clone repo to your local computer, navigate to newly created
-directory and do the following:
+directory and do the following steps:
 
-1. Create Virtualenv environment directory inside the project
+1. Create Virtualenv
 
    ```
    $ virtualenv env
    ```
 
-   This will create `env` directory inside of your project. Don't worry,
+   This will create `env` directory inside project. Don't worry,
    it's ignored by GIT by default.
 
-2. Activate Virtualenv environment
+2. Activate Virtualenv for the project
 
    ```
    $ source ./env/bin/activate
@@ -47,7 +47,7 @@ directory and do the following:
    $ python run.py
    ```
 
-4. Open web-browser and navigate to http://localhost:8080
+4. Open web-browser and navigate to [http://localhost:8080](http://localhost:8080)
 
 ## Contributing
 
