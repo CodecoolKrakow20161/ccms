@@ -41,7 +41,12 @@ directory and do the following steps:
    This will activate local development environment in current terminal
    session only. You have to run this command for every new terminal session.
 
-3. Run server
+3. Install requirements
+   ```
+   $ pip install -r requirements.txt
+   ```
+
+4. Run server
 
    ```
    $ python run.py
