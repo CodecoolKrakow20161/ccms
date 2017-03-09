@@ -65,3 +65,7 @@ directory and do the following steps:
 5. Push to your _origin_ repository.
 6. Create a new PR (Pull Request) in GitHub.
 7. Respond to any [code review feedback](https://lornajane.net/posts/2015/code-reviews-before-you-even-run-the-code).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) file.
