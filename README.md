@@ -48,13 +48,19 @@ directory and do the following steps:
    (env) $ pip install -r requirements.txt
    ```
 
-4. Run server
+4. Run migrations in order to create db and tables
+
+   ```
+   (env) $ python manage.py db upgrade
+   ```
+
+5. Run server
 
    ```
    (env) $ python manage.py runserver
    ```
 
-4. Open web-browser and navigate to [http://localhost:5000](http://localhost:5000)
+6. Open web-browser and navigate to [http://localhost:5000](http://localhost:5000)
 
 ## Contributing
 
