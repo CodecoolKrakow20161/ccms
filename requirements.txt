@@ -1,7 +1,10 @@
+alembic==0.9.1
 appdirs==1.4.2
 click==6.7
 decorator==4.0.11
 Flask==0.12
+Flask-Migrate==2.0.3
+Flask-Script==2.0.5
 Flask-SQLAlchemy==2.2
 Flask-WTF==0.14.2
 gunicorn==19.7.0
@@ -9,9 +12,11 @@ infinity==1.4
 intervals==0.8.0
 itsdangerous==0.24
 Jinja2==2.9.5
+Mako==1.0.6
 MarkupSafe==0.23
 packaging==16.8
 pyparsing==2.1.10
+python-editor==1.0.3
 six==1.10.0
 SQLAlchemy==1.1.6
 SQLAlchemy-Utils==0.32.12
