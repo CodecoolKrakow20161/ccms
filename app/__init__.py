@@ -20,7 +20,3 @@ from app.mod_classes.controllers import mod_classes
 
 app.register_blueprint(mod_default)
 app.register_blueprint(mod_classes)
-
-# Build the database:
-# This will create the database file using SQLAlchemy
-db.create_all()
