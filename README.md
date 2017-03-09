@@ -66,6 +66,10 @@ directory and do the following steps:
 6. Create a new PR (Pull Request) in GitHub.
 7. Respond to any [code review feedback](https://lornajane.net/posts/2015/code-reviews-before-you-even-run-the-code).
 
+## Documentation
+
+All documentation can be found in [docs](docs/README.md) directory.
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) file.
