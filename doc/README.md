@@ -2,6 +2,8 @@
 
 ## User documentation
 
+* [Classes](user/classes.md) Class represents a group of people that attend course.
+
 ## Contributor documentation
 
 ### General concepts
