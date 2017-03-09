@@ -68,7 +68,7 @@ directory and do the following steps:
 
 ## Documentation
 
-All documentation can be found in [docs](docs/README.md) directory.
+All documentation can be found in [doc](doc/README.md) directory.
 
 ## Changelog
 
