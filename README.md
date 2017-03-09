@@ -51,10 +51,10 @@ directory and do the following steps:
 4. Run server
 
    ```
-   (env) $ python run.py
+   (env) $ python manage.py runserver
    ```
 
-4. Open web-browser and navigate to [http://localhost:8080](http://localhost:8080)
+4. Open web-browser and navigate to [http://localhost:5000](http://localhost:5000)
 
 ## Contributing
 
