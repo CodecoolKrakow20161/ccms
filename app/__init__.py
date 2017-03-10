@@ -11,15 +11,18 @@ app.config.from_object('config')
 # by modules and controllers
 db = SQLAlchemy(app)
 
+
 # Sample HTTP error handling
 @app.errorhandler(404)
 def not_found(error):
     return render_template('404.html'), 404
 
+
 # Add app_version variable to Jinja2 templates context
 @app.context_processor
 def app_version():
     return dict(app_version=version)
+
 
 from app.mod_default.controllers import mod_default
 from app.mod_classes.controllers import mod_classes

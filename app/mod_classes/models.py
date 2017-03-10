@@ -1,6 +1,7 @@
 from app.base_model import BaseModel
 from app import db
 
+
 class Klass(BaseModel):
     __tablename__ = 'classes'
 

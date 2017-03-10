@@ -6,11 +6,13 @@ from app.mod_classes.forms import KlassForm
 # Define the blueprint: 'people', set its url prefix: app.url/people
 mod_classes = Blueprint('classes', __name__, url_prefix='/classes')
 
+
 # Set the route and accepted methods
 @mod_classes.route('/', methods=['GET'])
 def index():
     klasses = Klass.query.all()
     return render_template('classes/index.html', klasses=klasses)
+
 
 @mod_classes.route('/new', methods=['GET', 'POST'])
 def new():
@@ -25,6 +27,7 @@ def new():
 
     return render_template('classes/new.html', form=form)
 
+
 @mod_classes.route('/edit/<int:class_id>', methods=['GET', 'POST'])
 def edit(class_id):
     klass = Klass.query.get(class_id)
@@ -36,6 +39,7 @@ def edit(class_id):
         return redirect(url_for('classes.index'))
 
     return render_template('classes/edit.html', form=form, klass=klass)
+
 
 @mod_classes.route('/delete/<int:class_id>', methods=['GET'])
 def delete(class_id):
