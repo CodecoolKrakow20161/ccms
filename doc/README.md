@@ -4,6 +4,10 @@
 
 * [Classes](user/classes.md) Class represents a group of people that attend course.
 
+## Administartor documentation
+
+* [Environment Variables](administration/environment_variables.md) to configure CcMS.
+
 ## Contributor documentation
 
 ### General concepts
