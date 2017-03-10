@@ -11,12 +11,12 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 # Define the database - we are working with
 # SQLite for this example
-SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI", "sqlite:///" + os.path.join(BASE_DIR, 'app.db'))
+SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URI", "sqlite:///" + os.path.join(BASE_DIR, 'app.db'))
 DATABASE_CONNECT_OPTIONS = {}
 
 # Enable protection agains *Cross-site Request Forgery (CSRF)*
 CSRF_ENABLED = True
-WTF_CSRF_SECRET_KEY = "secret"
+WTF_CSRF_SECRET_KEY = os.getenv("CSRF_SECRET_KEY", "secret")
 
 # Secret key for signing cookies
-SECRET_KEY = "secret"
+SECRET_KEY = os.getenv("SECRET_KEY", "secret")
