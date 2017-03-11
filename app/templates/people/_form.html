@@ -1,0 +1,15 @@
+{% from "_formhelpers.html" import render_field %}
+
+<form class="form-horizontal" action="" method="post">
+    {{ form.csrf_token }}
+    {{ render_field(form.first_name, class="form-control") }}
+    {{ render_field(form.last_name, class="form-control") }}
+    {{ render_field(form.email, class="form-control") }}
+    {{ render_field(form.phone, class="form-control") }}
+
+    <div class="form-group">
+        <div class="col-sm-8 col-lg-8 col-sm-offset-2 col-lg-offset-2">
+            <button type="submit" class="btn btn-primary">Add Person</button>
+        </div>
+    </div>
+</form>
