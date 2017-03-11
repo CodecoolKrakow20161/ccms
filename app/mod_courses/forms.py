@@ -1,10 +1,10 @@
 from wtforms_alchemy import ModelForm
-from app.mod_classes.models import Klass
+from app.mod_courses.models import Course
 
 
-class KlassForm(ModelForm):
+class CourseForm(ModelForm):
     class Meta:
-        model = Klass
+        model = Course
         strip_string_fields = True
         field_args = {
             "name": {
