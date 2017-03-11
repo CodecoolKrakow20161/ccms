@@ -2,7 +2,7 @@ from app.base_model import BaseModel
 from app import db
 
 
-class People(BaseModel):
+class Person(BaseModel):
     __tablename__ = 'people'
 
     first_name = db.Column(db.String, nullable=False)
