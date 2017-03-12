@@ -23,3 +23,14 @@ def new():
         return redirect(url_for('peopple.index'))
 
     return render_template('people/new.html', form=form)
+
+@mod_people.route('/edit/<int:id>', methods=['GET', 'POST'])
+def edit(id):
+    person = Person.query.get(id)
+    form = PersonForm(formdata=request.form, obj=person)
+    if request.method == "POST" and form.validate():
+        form.populate_obj(person)
+        db.session.commit()
+        return redirect(url_for('people.index'))
+
+    return render_template('people/edit.html', form=form, person=person)
