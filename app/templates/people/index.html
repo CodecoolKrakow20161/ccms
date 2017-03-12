@@ -13,6 +13,34 @@
                 No people found. <a href="#">Add new person.</a>
             </p>
         {% else %}
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover table-striped table-indexed">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Full name</th>
+                            <th>E-mail</th>
+                            <th>Phone</th>
+                            <th style="width: 150px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for person in people %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ person.full_name }}</td>
+                            <td>{{ person.email }}</td>
+                            <td>{{ person.phone }}</td>
+                            <td>
+                                <span><a href="#">Edit</a></span>
+                                <span>|</span>
+                                <span><a href="#">Remove</a></span>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         {% endif %}
     </div>
 </div>

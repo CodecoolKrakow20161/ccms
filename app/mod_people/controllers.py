@@ -7,7 +7,8 @@ mod_people = Blueprint('people', __name__, url_prefix='/people')
 
 @mod_people.route('/')
 def index():
-    return render_template('people/index.html')
+    people = Person.query.all()
+    return render_template('people/index.html', people=people)
 
 @mod_people.route('/new', methods=['GET', 'POST'])
 def new():
@@ -19,6 +20,6 @@ def new():
         db.session.add(person)
         db.session.commit()
 
-        return render_template("people/index.html")
+        return redirect(url_for('peopple.index'))
 
     return render_template('people/new.html', form=form)
