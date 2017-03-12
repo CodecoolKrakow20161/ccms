@@ -20,11 +20,11 @@ def new():
         db.session.add(person)
         db.session.commit()
 
-        return redirect(url_for('peopple.index'))
+        return redirect(url_for('people.index'))
 
     return render_template('people/new.html', form=form)
 
-@mod_people.route('/edit/<int:id>', methods=['GET', 'POST'])
+@mod_people.route('/<int:id>/edit', methods=['GET', 'POST'])
 def edit(id):
     person = Person.query.get(id)
     form = PersonForm(formdata=request.form, obj=person)
@@ -35,7 +35,7 @@ def edit(id):
 
     return render_template('people/edit.html', form=form, person=person)
 
-@mod_people.route('/delete/<int:id>')
+@mod_people.route('/<int:id>/delete', methods=['POST'])
 def delete(id):
     person = Person.query.get(id)
     db.session.delete(person)
