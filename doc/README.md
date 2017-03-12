@@ -3,6 +3,7 @@
 ## User documentation
 
 * [Courses](user/courses.md)
+* [People](user/people.md) represents, e.g. students or employees of school
 
 ## Administartor documentation
 
