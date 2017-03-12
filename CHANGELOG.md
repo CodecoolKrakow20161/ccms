@@ -1,6 +1,7 @@
 # Changelog
 
 * Managing people
+* Rename `classes` resource to `courses`
 
 ### 0.1.1
 
