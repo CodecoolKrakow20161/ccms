@@ -34,3 +34,10 @@ def edit(id):
         return redirect(url_for('people.index'))
 
     return render_template('people/edit.html', form=form, person=person)
+
+@mod_people.route('/delete/<int:id>')
+def delete(id):
+    person = Person.query.get(id)
+    db.session.delete(person)
+    db.session.commit()
+    return redirect(url_for('people.index'))

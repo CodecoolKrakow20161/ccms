@@ -34,7 +34,7 @@
                             <td>
                                 <span><a href="{{ url_for('people.edit', id=person.id) }}">Edit</a></span>
                                 <span>|</span>
-                                <span><a href="#">Remove</a></span>
+                                <span><a href="{{ url_for('people.delete', id=person.id) }}">Remove</a></span>
                             </td>
                         </tr>
                     {% endfor %}
