@@ -2,7 +2,7 @@
 {% set page_title = "People" %}
 {% block page_header %}
     {{ super() }}
-    <a href="#" class="btn btn-primary pull-right">Add new person</a>
+    <a href="{{ url_for('people.new') }}" class="btn btn-primary pull-right">Add new person</a>
 {% endblock %}
 
 {% block body %}
@@ -10,7 +10,7 @@
     <div class="col-lg-12">
         {% if not people %}
             <p class="bg bg-info text-center">
-                No people found. <a href="#">Add new person.</a>
+                No people found. <a href="{{ url_for('people.new') }}">Add new person.</a>
             </p>
         {% else %}
             <div class="table-responsive">
