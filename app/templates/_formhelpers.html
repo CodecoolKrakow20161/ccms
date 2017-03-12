@@ -9,3 +9,8 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro delete_link(url, id) %}
+    <form id="delete_form_{{ id }}" action="{{ url }}" method="POST" style="display: none;"></form>
+    <a href="#" class="submit-form" data-form-id="delete_form_{{ id }}">Delete</a>
+{% endmacro %}

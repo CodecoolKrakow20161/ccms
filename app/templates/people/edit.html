@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% set active_page = "people.index" %}
+{% set page_title %}People <small>Edit: {{ person.full_name }}</small>{% endset %}
+{% block body %}
+<div class="row">
+    <div class="col-lg-12">
+        {% include "people/_form.html" %}
+    </div>
+</div>
+{% endblock %}
