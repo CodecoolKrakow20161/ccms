@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
+{% from "_formhelpers.html" import delete_link %}
+
 {% set page_title = "People" %}
 {% block page_header %}
     {{ super() }}
@@ -34,7 +36,7 @@
                             <td>
                                 <span><a href="{{ url_for('people.edit', id=person.id) }}">Edit</a></span>
                                 <span>|</span>
-                                <span><a href="{{ url_for('people.delete', id=person.id) }}">Remove</a></span>
+                                <span>{{ delete_link(url_for('people.delete', id=person.id), person.id) }}</span>
                             </td>
                         </tr>
                     {% endfor %}
