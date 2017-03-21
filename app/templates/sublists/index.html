@@ -30,7 +30,7 @@
                             <td>{{ loop.index }}</td>
                             <td>{{ sublist.name }}</td>
                             <td>
-                                <span><a href="">Edit</a></span>
+                                <span><a href="{{ url_for('sublists.edit', id=sublist.id) }}">Edit</a></span>
                                 <span>|</span>
                                 <span>{{ delete_link(url_for('sublists.delete', id=sublist.id), sublist.id) }}</span>
                             </td>
