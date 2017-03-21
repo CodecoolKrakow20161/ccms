@@ -32,7 +32,7 @@
                             <td>
                                 <span><a href="">Edit</a></span>
                                 <span>|</span>
-                                <span>{{ delete_link('', sublist.id) }}</span>
+                                <span>{{ delete_link(url_for('sublists.delete', id=sublist.id), sublist.id) }}</span>
                             </td>
                         </tr>
                     {% endfor %}

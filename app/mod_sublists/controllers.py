@@ -20,3 +20,10 @@ def new():
         return redirect(url_for('sublists.index'))
 
     return render_template('sublists/new.html', form=form)
+
+@mod_sublists.route('/<int:id>/delete', methods=['POST'])
+def delete(id):
+    sublist = Sublist.query.get_or_404(id)
+    db.session.delete(sublist)
+    db.session.commit()
+    return redirect(url_for('sublists.index'))
