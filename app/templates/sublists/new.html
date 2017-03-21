@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% set active_page = 'sublists.index' %}
+{% set page_title %}Subscription lists <small>Create new list</small>{% endset %}
+
+{% block body %}
+<div class="row">
+    <div class="col-lg-12">
+        {% include "sublists/_form.html" %}
+    </div>
+</div>
+{% endblock %}

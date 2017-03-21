@@ -27,7 +27,9 @@ def app_version():
 from app.mod_default.controllers import mod_default
 from app.mod_courses.controllers import mod_courses
 from app.mod_people.controllers import mod_people
+from app.mod_sublists.controllers import mod_sublists
 
 app.register_blueprint(mod_default)
 app.register_blueprint(mod_courses)
 app.register_blueprint(mod_people)
+app.register_blueprint(mod_sublists)
