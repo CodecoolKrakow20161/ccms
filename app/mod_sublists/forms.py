@@ -11,7 +11,7 @@ class SublistForm(ModelForm):
         strip_string_fields = True
 
     name = StringField(
-        validators=[DataRequired(), Length(min=3, max=100)]
+        validators=[DataRequired(), Length(min=3, max=100), Unique(column='name')]
     )
 
     description = TextAreaField()
